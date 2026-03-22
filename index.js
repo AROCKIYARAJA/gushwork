@@ -126,17 +126,8 @@ document
 (function () {
     const wrapper = document.querySelector(".main-image-wrap");
     const productContainer = document.getElementById("info-container");
-    const lenswrap = document.createElement("div");
     const lens = document.createElement("div");
     lens.id = "zoom-lens";
-    lenswrap.style.cssText = `
-    position: absolute;
-    border-radius:10px;
-    width: 300px;
-    background-color: #e8e8e8;
-    background-image: radial-gradient(circle, #6d6d6d 1px, transparent 1px);
-    background-size: 20px 20px;
-    height: 300px;`
     lens.style.cssText = `
     position: absolute;
     width: 300px;
@@ -152,8 +143,7 @@ document
     transform: translateY(-50%);
   `;
 
-    lenswrap.appendChild(lens);
-    productContainer.appendChild(lenswrap);
+    productContainer.appendChild(lens);
 
     const ZOOM = 2.5;
     const LENS_HALF = 100;
