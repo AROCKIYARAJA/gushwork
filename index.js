@@ -121,6 +121,73 @@ document
     renderThumbs();
 })();
 
+// ── Zoom Preview on Hover ──────────────────────────────────────────
+// ── Zoom Preview on Hover ──────────────────────────────────────────
+(function () {
+    const wrapper = document.querySelector(".main-image-wrap");
+    const productContainer = document.getElementById("info-container");
+    const lens = document.createElement("div");
+    lens.id = "zoom-lens";
+    lens.style.cssText = `
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2.5px solid rgba(160, 160, 160, 0.85);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    display: none;
+    border-radius:10px;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 6px 24px rgba(0,0,0,0.25);
+    top: 50%;
+    left: 43%;
+    transform: translateY(-50%);
+  `;
+    productContainer.appendChild(lens);
+
+    const ZOOM = 2.5;
+    const LENS_HALF = 100;
+
+    function getActiveImage() {
+        const track = wrapper.querySelector("div");
+        const imgs = track ? track.querySelectorAll("img") : [];
+        const transform = track ? track.style.transform : "";
+        const match = transform.match(/translateX\(([-\d.]+)%\)/);
+        const offsetPct = match ? parseFloat(match[1]) : 0;
+        const index = Math.round(-offsetPct / 100);
+        return imgs[index] || imgs[0];
+    }
+
+    wrapper.addEventListener("mouseenter", () => {
+        lens.style.display = "block";
+    });
+
+    wrapper.addEventListener("mouseleave", () => {
+        lens.style.display = "none";
+    });
+
+    wrapper.addEventListener("mousemove", (e) => {
+        const rect = wrapper.getBoundingClientRect();
+
+        // Cursor position drives zoom origin — lens stays fixed
+        const rawX = e.clientX - rect.left;
+        const rawY = e.clientY - rect.top;
+
+        const img = getActiveImage();
+        if (!img) return;
+
+        const bgW = rect.width * ZOOM;
+        const bgH = rect.height * ZOOM;
+
+        const bgX = -(rawX * ZOOM - LENS_HALF);
+        const bgY = -(rawY * ZOOM - LENS_HALF);
+
+        lens.style.backgroundImage = `url('${img.src}')`;
+        lens.style.backgroundSize = `${bgW}px ${bgH}px`;
+        lens.style.backgroundPosition = `${bgX}px ${bgY}px`;
+    });
+})();
+
 const toast = document.getElementById('dlToast');
 const toastTitle = document.getElementById('toast-title')
 const toastSub = document.getElementById('toast-sub')
