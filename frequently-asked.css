@@ -1,0 +1,266 @@
+.section-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* ── INNER CONTAINER: max-width + centred ── */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+/* ── HEADING ── */
+.faq-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.faq-heading span {
+  color: #3b3bbf;
+}
+
+/* ── FAQ LIST ── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+/* ── FAQ ITEM ── */
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #e0e0e8;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 2px 12px rgba(59, 59, 191, 0.08);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  cursor: pointer;
+  user-select: none;
+  gap: 16px;
+}
+
+.faq-question-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  line-height: 1.4;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #f0f0fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.faq-item.open .faq-icon {
+  background-color: #f0f0fa;
+}
+
+.faq-icon svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon svg {
+  transform: rotate(180deg);
+}
+
+/* chevron colour: closed = dark, open = brand red/pink like screenshots */
+.faq-icon svg path {
+  stroke: #4a4a6a;
+}
+
+.faq-item.open .faq-icon svg path {
+  stroke: #e05555;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease;
+  padding: 0 20px;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  padding: 0 20px 18px;
+}
+
+.faq-answer p {
+  font-size: 0.88rem;
+  color: #555570;
+  line-height: 1.65;
+}
+
+/* ── CATALOGUE CTA CARD ── */
+.catalogue-card {
+  background: #f8f8fc;
+  border: 1px solid #e0e0e8;
+  border-radius: 12px;
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.catalogue-text h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.catalogue-text p {
+  font-size: 0.85rem;
+  color: #666688;
+}
+
+.catalogue-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.catalogue-form input[type="email"] {
+  border: 1px solid #d0d0e0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: #1a1a2e;
+  outline: none;
+  background: #ffffff;
+  min-width: 200px;
+  transition: border-color 0.2s;
+}
+
+.catalogue-form input[type="email"]::placeholder {
+  color: #aaaacc;
+}
+
+.catalogue-form input[type="email"]:focus {
+  border-color: #3b3bbf;
+}
+
+.catalogue-form button {
+  background-color: #2e2eb8;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.catalogue-form button:hover {
+  background-color: #2525a0;
+}
+
+/* ══════════════════════════════════
+       RESPONSIVE BREAKPOINTS
+    ══════════════════════════════════ */
+
+/* ≤ 1600px — already handled by default 100px padding */
+
+/* ≤ 1440px */
+@media (max-width: 1440px) {
+  .container {
+    padding: 100px;
+  }
+}
+
+/* ≤ 1200px */
+@media (max-width: 1200px) {
+  .container {
+    padding: 80px;
+  }
+}
+
+/* ≤ 1080px */
+@media (max-width: 1080px) {
+  .container {
+    padding: 80px 60px;
+  }
+}
+
+/* ≤ 800px */
+@media (max-width: 800px) {
+  .container {
+    padding: 80px 48px;
+  }
+
+  .faq-heading {
+    font-size: 2rem;
+  }
+
+  .catalogue-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .catalogue-form {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .catalogue-form input[type="email"] {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .catalogue-form button {
+    width: 100%;
+  }
+}
+
+/* ≤ 600px */
+@media (max-width: 600px) {
+  .faq-heading {
+    font-size: 1.65rem;
+  }
+}
+
+/* ≤ 360px */
+@media (max-width: 360px) {
+  .container {
+    padding: 48px 16px;
+  }
+
+  .faq-heading {
+    font-size: 1.5rem;
+  }
+
+  .catalogue-card {
+    padding: 24px 20px;
+  }
+}

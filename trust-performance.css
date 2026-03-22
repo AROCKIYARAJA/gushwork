@@ -1,0 +1,225 @@
+.trust-perform-section-wrapper {
+  width: 100%;
+  padding: 0px 0;
+  overflow: hidden;
+}
+
+.trust-perform-section-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.trust-perform-section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.trust-perform-section-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.trust-perform-section-header p {
+  font-size: 15px;
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Scroll track */
+.trust-perform-scroll-track-outer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+
+/* Fade edges */
+.trust-perform-scroll-track-outer::before,
+.trust-perform-scroll-track-outer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.trust-perform-scroll-track-outer::before {
+  left: 0;
+  background: linear-gradient(to right, #f0f0ed, transparent);
+}
+.trust-perform-scroll-track-outer::after {
+  right: 0;
+  background: linear-gradient(to left, #f0f0ed, transparent);
+}
+
+.trust-perform-scroll-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollX 30s linear infinite;
+  will-change: transform;
+}
+
+.trust-perform-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Card */
+.trust-perform-testimonial-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  width: 320px;
+  min-width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.trust-perform-testimonial-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.trust-perform-quote-icon {
+  font-size: 40px;
+  color: #1e2a6e;
+  line-height: 1;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.trust-perform-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.trust-perform-card-body {
+  font-size: 13.5px;
+  color: #555;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.trust-perform-card-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0ed;
+}
+
+.trust-perform-author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url(./assets/trust-perform-img/profile-pic.avif);
+  background-position: center;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.trust-perform-author-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111;
+}
+
+.trust-perform-author-role {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1600px) {
+  .trust-perform-section-inner {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1440px) {
+  .trust-perform-section-inner {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .trust-perform-section-inner {
+    padding: 0 80px;
+  }
+  .trust-perform-section-header h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1080px) {
+  .trust-perform-section-wrapper {
+    padding: 80px 0;
+  }
+  .trust-perform-section-inner {
+    padding: 0 60px;
+  }
+  .trust-perform-section-header h2 {
+    font-size: 32px;
+  }
+  .testimonial-card {
+    width: 280px;
+    min-width: 280px;
+  }
+}
+@media (max-width: 800px) {
+  .trust-perform-section-wrapper {
+    padding: 80px 0;
+  }
+  .trust-perform-section-inner {
+    padding: 0 48px;
+  }
+  .trust-perform-section-header h2 {
+    font-size: 28px;
+  }
+  .testimonial-card {
+    width: 260px;
+    min-width: 260px;
+  }
+}
+@media (max-width: 360px) {
+  .trust-perform-section-wrapper {
+    padding: 48px 0;
+  }
+  .trust-perform-section-inner {
+    padding: 0 16px;
+  }
+  .trust-perform-section-header h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  .trust-perform-section-header p {
+    font-size: 13px;
+  }
+  .trust-perform-testimonial-card {
+    width: 240px;
+    min-width: 240px;
+    padding: 24px 20px 20px;
+  }
+}

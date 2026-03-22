@@ -1,0 +1,61 @@
+.brand-and-msg {
+  width: 1240px;
+  height: 92;
+  max-width: 100%;
+  margin: 100px auto;
+  gap: 20;
+  opacity: 1;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.brand-and-msg p {
+  text-align: center;
+  color: #878b94;
+  padding: 0 10px;
+}
+
+.brands {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  scroll-margin-left: 10px;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+.brands-wrapper {
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.brands {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  width: max-content;
+  animation: marquee 12s linear infinite;
+}
+
+.brands:hover {
+  animation-play-state: paused;
+}
+
+.brands img {
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.brands img:last-child {
+  margin-right: 30px;
+}

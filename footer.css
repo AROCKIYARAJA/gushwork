@@ -1,0 +1,317 @@
+/* ─── Dot-texture background Additionally added for better UI approach─── */
+footer {
+  background-color: #e8e8e8;
+  background-image: radial-gradient(circle, #bbb 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding-top: 60px;
+  margin-top: 50px;
+}
+
+/* ─── Centering wrapper ─── */
+.f-wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+/* ─── Top card ─── */
+.top-card {
+  background: #f2f2f2;
+  border: 1px solid #d8d8d8;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 52px;
+  margin-bottom: 60px;
+}
+
+/* ── Logo ── */
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 1;
+}
+.logo-main {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #7b1313;
+  letter-spacing: 0.5px;
+}
+.logo-sub-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-top: 1.5px solid #888;
+  margin-top: 6px;
+  padding-top: 5px;
+}
+.logo-sub-row span {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+.logo-sub-row .sep {
+  display: inline-block;
+  width: 1.5px;
+  height: 11px;
+  background: #555;
+  margin: 0 7px;
+}
+
+/* ── Tagline ── */
+.tagline {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  text-align: right;
+  line-height: 1.4;
+}
+.tagline .blue {
+  color: #1e3a8a;
+}
+
+/* ─── Links grid ─── */
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr 1.4fr 1.6fr;
+  gap: 24px;
+  padding-bottom: 60px;
+}
+
+.col h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 22px;
+}
+
+.col ul {
+  list-style: none;
+}
+.col ul li {
+  margin-bottom: 15px;
+}
+.col ul li a {
+  font-size: 14px;
+  color: #3a3a3a;
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.15s;
+}
+.col ul li a:hover {
+  color: #1e3a8a;
+}
+
+/* ─── Contact column ─── */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ci {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 14px;
+  color: #3a3a3a;
+  line-height: 1.55;
+}
+.ci .icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.social-divider {
+  border: none;
+  border-top: 1px solid #c5c5c5;
+  margin: 22px 0 18px;
+}
+
+/* ─── Social icons ─── */
+.socials {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.socials a {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.18s;
+}
+.socials a:hover {
+  opacity: 0.78;
+}
+
+/* ─── Bottom bar ─── */
+.bottom-bar {
+  border-top: 1px solid #ccc;
+}
+.bottom-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 18px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom-inner p {
+  font-size: 12.5px;
+  color: #888;
+}
+.bottom-links {
+  display: flex;
+  gap: 36px;
+}
+.bottom-links a {
+  font-size: 12.5px;
+  color: #888;
+  text-decoration: none;
+}
+.bottom-links a:hover {
+  color: #1e3a8a;
+}
+
+/* ══════════════════════════════
+       RESPONSIVE BREAKPOINTS
+    ══════════════════════════════ */
+
+/* ≤ 1440px  (padding 100px – already default) */
+
+/* ≤ 1200px */
+@media (max-width: 1200px) {
+  .f-wrap,
+  .bottom-inner {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .tagline {
+    font-size: 22px;
+  }
+}
+
+/* ≤ 1080px */
+@media (max-width: 1080px) {
+  footer {
+    padding-top: 80px;
+  }
+  .f-wrap,
+  .bottom-inner {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .top-card {
+    padding: 30px 40px;
+  }
+  .tagline {
+    font-size: 20px;
+  }
+  .logo-main {
+    font-size: 25px;
+  }
+}
+
+/* ≤ 800px */
+@media (max-width: 800px) {
+  footer {
+    padding-top: 80px;
+  }
+  .f-wrap,
+  .bottom-inner {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .top-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 26px 32px;
+    margin-bottom: 48px;
+  }
+  .tagline {
+    text-align: left;
+    font-size: 18px;
+  }
+  .links-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 24px;
+    padding-bottom: 48px;
+  }
+}
+
+/* ≤ 600px */
+@media (max-width: 600px) {
+  .links-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .bottom-links {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+  }
+}
+
+/* ≤ 430px */
+@media (max-width: 430px) {
+  .f-wrap,
+  .bottom-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  footer {
+    padding-top: 48px;
+  }
+  .top-card {
+    padding: 20px 20px;
+    border-radius: 12px;
+    gap: 16px;
+  }
+  .tagline {
+    font-size: 16px;
+  }
+  .logo-main {
+    font-size: 22px;
+  }
+}
+
+/* ≤ 360px */
+@media (max-width: 360px) {
+  .f-wrap,
+  .bottom-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  footer {
+    padding-top: 48px;
+  }
+  .top-card {
+    padding: 16px 16px;
+    border-radius: 10px;
+  }
+  .tagline {
+    font-size: 14.5px;
+  }
+  .logo-main {
+    font-size: 20px;
+  }
+  .links-grid {
+    padding-bottom: 36px;
+  }
+}

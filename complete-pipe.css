@@ -1,0 +1,230 @@
+.complete-pipe-section-wrapper {
+  width: 100%;
+  padding: 80px 100px;
+}
+
+.complete-pipe-section-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Header */
+.complete-pipe-section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.complete-pipe-section-header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.complete-pipe-section-header p {
+  font-size: 0.95rem;
+  color: #555;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Cards Grid */
+.complete-pipe-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.complete-pipe-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.complete-pipe-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+}
+
+.complete-pipe-card p {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.55;
+}
+
+.complete-pipe-card-image {
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.complete-pipe-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder image styles using CSS gradients */
+.complete-pipe-card-image.img-1 {
+  background: linear-gradient(135deg, #b8cce4 0%, #d6e4f0 100%);
+  position: relative;
+}
+
+.complete-pipe-card-image.img-2 {
+  background: linear-gradient(135deg, #c9d9c9 0%, #e0ede0 100%);
+  position: relative;
+}
+
+.complete-pipe-card-image.img-3 {
+  background: linear-gradient(135deg, #b8cce4 0%, #d6e4f0 100%);
+  position: relative;
+}
+
+.complete-pipe-learn-more-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #2b3990;
+  cursor: pointer;
+  transition:
+    background 0.18s,
+    border-color 0.18s,
+    color 0.18s;
+  margin-top: auto;
+}
+
+.complete-pipe-learn-more-btn:hover {
+  background: #f5f5f5;
+  border-color: #aaa;
+}
+
+/* CTA Banner */
+.complete-pipe-cta-banner {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.complete-pipe-cta-text h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.complete-pipe-cta-text h4 span {
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+.complete-pipe-cta-text p {
+  font-size: 0.82rem;
+  color: #666;
+}
+
+.complete-pipe-cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #3730a3;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 22px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.18s;
+  flex-shrink: 0;
+}
+
+.complete-pipe-cta-btn:hover {
+  background: #312e81;
+}
+
+.complete-pipe-cta-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* ── Responsive Breakpoints ── */
+
+/* 1200px */
+@media (max-width: 1200px) {
+  .complete-pipe-section-wrapper {
+    padding: 80px 80px;
+  }
+}
+
+/* 1080px */
+@media (max-width: 1080px) {
+  .complete-pipe-section-wrapper {
+    padding: 80px 60px;
+  }
+}
+
+/* 800px */
+@media (max-width: 800px) {
+  .complete-pipe-section-wrapper {
+    padding: 80px 48px;
+  }
+
+  .complete-pipe-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .complete-pipe-cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .complete-pipe-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* 360px */
+@media (max-width: 360px) {
+  .complete-pipe-section-wrapper {
+    padding: 48px 16px;
+  }
+
+  .complete-pipe-section-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .complete-pipe-cta-banner {
+    padding: 20px;
+  }
+}

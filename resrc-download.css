@@ -1,0 +1,132 @@
+.resrc-download-section-wrapper {
+  width: 100%;
+  padding: 100px;
+}
+
+.resrc-download-section-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.resrc-download-section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resrc-download-section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.resrc-download-section-header p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.resrc-download-downloads-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.resrc-download-download-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.resrc-download-download-row:last-child {
+  border-bottom: none;
+}
+
+.resrc-download-download-name {
+  font-size: 0.875rem;
+  color: #222;
+}
+
+.resrc-download-download-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.resrc-download-download-link:hover {
+  opacity: 0.75;
+}
+
+.resrc-download-download-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ── 1200px ── */
+@media (max-width: 1200px) {
+  .resrc-download-section-wrapper {
+    padding: 80px;
+  }
+}
+
+/* ── 1080px ── */
+@media (max-width: 1080px) {
+  .resrc-download-section-wrapper {
+    padding: 80px 60px;
+  }
+}
+
+/* ── 800px ── */
+@media (max-width: 800px) {
+  .resrc-download-section-wrapper {
+    padding: 80px 48px;
+  }
+
+  .resrc-download-section-header h2 {
+    font-size: 1.9rem;
+  }
+}
+
+/* ── 360px / mobile ── */
+@media (max-width: 480px) {
+  .resrc-download-section-wrapper {
+    padding: 48px 16px;
+  }
+
+  .resrc-download-section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .resrc-download-section-header p {
+    font-size: 0.875rem;
+  }
+
+  .resrc-download-download-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .resrc-download-download-name {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .resrc-download-download-link {
+    font-size: 0.875rem;
+  }
+}

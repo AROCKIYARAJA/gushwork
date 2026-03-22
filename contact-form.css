@@ -1,0 +1,265 @@
+.contact-us-section-wrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* ── Blue outer card ── */
+.contact-us-cta-card {
+  background-color: #2b3990;
+  border-radius: 20px;
+  padding: 56px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+/* ── Left content ── */
+.contact-us-cta-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-us-cta-left h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.18;
+  margin-bottom: 20px;
+}
+
+.contact-us-cta-left .desc {
+  font-size: 14px;
+  color: #c8cddf;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 420px;
+}
+
+.contact-us-cta-left .contact {
+  font-size: 12.5px;
+  color: #a8afc8;
+  line-height: 1.75;
+  max-width: 420px;
+}
+
+.contact-us-cta-left .contact strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.contact-us-cta-left .contact a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Right form card ── */
+.contact-us-cta-form-card {
+  background: #f2f3f7;
+  border-radius: 14px;
+  padding: 28px 26px 30px;
+  width: 340px;
+  flex-shrink: 0;
+}
+
+.contact-us-cta-form-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 18px;
+}
+
+/* Shared field styles */
+.contact-us-field {
+  width: 100%;
+  height: 44px;
+  background: #ffffff;
+  border: 1.5px solid #e2e5ed;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #333;
+  padding: 0 14px;
+  outline: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: border-color 0.2s;
+}
+
+.contact-us-field::placeholder {
+  color: #b0b8c9;
+}
+
+.contact-us-field:focus {
+  border-color: #2e3799;
+}
+
+/* Phone row */
+.contact-us-phone-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  background: #ffffff;
+  border: 1.5px solid #e2e5ed;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.contact-us-phone-row:focus-within {
+  border-color: #2e3799;
+}
+
+.contact-us-phone-prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 6px 0 12px;
+  gap: 3px;
+  border-right: 1.5px solid #e2e5ed;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.contact-us-phone-prefix select {
+  border: none;
+  background: transparent;
+  font-size: 13.5px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.contact-us-phone-prefix .arrow {
+  font-size: 9px;
+  color: #888;
+  pointer-events: none;
+  margin-left: 1px;
+}
+
+.contact-us-phone-row input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-size: 13.5px;
+  color: #333;
+  padding: 0 12px;
+  outline: none;
+}
+
+.contact-us-phone-row input::placeholder {
+  color: #b0b8c9;
+}
+
+/* CTA Button */
+.contact-us-cta-btn {
+  width: 100%;
+  height: 46px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+.contact-us-cta-btn:hover {
+  background: #1e2a50;
+}
+
+.contact-us-cta-btn:active {
+  transform: scale(0.99);
+}
+.contact-us-desc,
+.contact-us-contact {
+  max-width: 430px;
+  word-spacing: 5px;
+  line-height: 25px;
+  color: #ffffffcc;
+}
+
+.contact-us-email-id {
+  color: white;
+}
+/* ════════════════════════════
+       RESPONSIVE BREAKPOINTS
+    ════════════════════════════ */
+
+/* <= 1200px */
+@media (max-width: 1200px) {
+  .contact-us-cta-left h2 {
+    font-size: 34px;
+  }
+  .contact-us-cta-form-card {
+    width: 310px;
+  }
+}
+
+/* <= 1080px */
+@media (max-width: 1080px) {
+  .contact-us-cta-card {
+    padding: 48px 44px;
+    gap: 36px;
+  }
+  .contact-us-cta-left h2 {
+    font-size: 30px;
+  }
+  .contact-us-cta-form-card {
+    width: 290px;
+  }
+}
+
+/* <= 800px */
+@media (max-width: 800px) {
+  .contact-us-cta-card {
+    padding: 44px 36px;
+    gap: 28px;
+  }
+  .contact-us-cta-left h2 {
+    font-size: 28px;
+  }
+  .contact-us-cta-form-card {
+    width: 260px;
+    padding: 24px 20px 26px;
+  }
+}
+
+/* <= 600px — stack vertically */
+@media (max-width: 600px) {
+  .contact-us-cta-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 40px 28px;
+    gap: 32px;
+  }
+  .contact-us-cta-left h2 {
+    font-size: 30px;
+  }
+  .contact-us-cta-left .contact-us-desc,
+  .contact-us-cta-left .contact-us-contact {
+    max-width: 100%;
+  }
+  .cta-form-card {
+    width: 100%;
+  }
+}
+
+/* <= 360px */
+@media (max-width: 360px) {
+  .contact-us-cta-card {
+    padding: 32px 20px;
+  }
+  .contact-us-cta-left h2 {
+    font-size: 26px;
+  }
+}
