@@ -498,6 +498,10 @@ countrySelect.addEventListener('click', (e) => {
 
 // Open Popup 
 const ctaButton = document.getElementById("cta-btn");
+const reqCusQuoteButton = document.getElementById("contact-us-cta-form-card-btn");
+reqCusQuoteButton.addEventListener("click", () => {
+    qouteOverlay.style.display = 'flex'
+})
 ctaButton.addEventListener("click", () => {
     qouteOverlay.style.display = 'flex'
 })
